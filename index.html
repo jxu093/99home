@@ -1,192 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>99home.ca</title>
-	<link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,100italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,800,700,400,600,300" rel="stylesheet" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<style>
-		html, body {
-			height: 100%;
-			margin: 0;
-		}
-		body {
-			font-family: 'Helvetica Neue','Helvetica','Arial','sans-serif';
-			color: white;
-			text-align: center;
-		}
-		.content-box {
-			height: 100%;
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			
-		}
-		.bg-image-overlay {
-			background-color: rgba(0,0,0,0.3);
-		}
-		.bg-image {
-			position:absolute;
-			top:0;
-			left:0;
-			width:100%;
-			height:100%;
-			filter:grayscale(0.3);
-			background-position: center;
-			background-size: cover;
-			z-index:-10
-		}
-		#bg1 {
-			background-image:url('img/skyline3.jpg');
-		}
-		#bg2 {
-			background-image:url('img/skyline4.jpg');
-			top: 300%;
-		}
+  <meta charset="UTF-8">
+  <title>99home.ca</title>
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,100italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,800,700,400,600,300" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      font-family: 'Helvetica Neue','Helvetica','Arial','sans-serif';
+      color: white;
+      text-align: center;
+    }
+    .content-box {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    .bg-image-overlay {
+      background-color: rgba(0,0,0,0.3);
+    }
+    .bg-image {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      filter:grayscale(0.3);
+      background-position: center;
+      background-size: cover;
+      z-index:-10
+    }
+    #bg1 {
+      background-image:url('img/skyline3.jpg');
+    }
+    #bg2 {
+      background-image:url('img/sold_keys.jpg');
+      top: 200%;
+    }
+    #bg3 {
+      background-image:url('img/skyline2.jpg');
+      top: 400%;
+    }
 
-		#splash {
-			background-color: rgba(0,0,0,0.2);
-		}
+    #splash {
+      background-color: rgba(0,0,0,0.2);
+    }
 
-		#splash .cover {
-			width: 100%;
-			font-family: 'Gotham', 'Source Sans Pro', 'Arial Black', Avenir, Roboto;
-			text-shadow: 0 1px 3px rgba(0,0,0,.5);
-			background-color: rgba(0,0,0,0.5);
-		}
+    #splash .cover {
+      width: 100%;
+      font-family: 'Gotham', 'Source Sans Pro', 'Arial Black', Avenir, Roboto;
+      text-shadow: 0 1px 3px rgba(0,0,0,.5);
+      background-color: rgba(0,0,0,0.5);
+    }
 
-		.content-box .cover {
-			width: 100%;
-			background-color: rgba(0,0,0,0.5);
-		}
+    .content-box .cover {
+      width: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
 
-		.content-box img {
-			height: 300px;
-			width: 40%;
-			border: 1px solid black;
-		}
+    .content-box img {
+      height: 300px;
+      width: 40%;
+      border: 1px solid black;
+    }
 
-		#splash h1 {
-			font-weight:900;
-			font-size:4em;
-			text-transform: uppercase;
-		}
+    #splash h1 {
+      font-weight:900;
+      font-size:4em;
+      text-transform: uppercase;
+    }
 
-		#logo {
-			float: left;
-			padding: 2px;
-			/*background: rgba(0,0,0,0.4);*/
-			color: azure;
-			text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, .5);
-		}
+    #logo {
+      float: left;
+      padding: 2px;
+      /*background: rgba(0,0,0,0.4);*/
+      color: azure;
+      text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, .5);
+    }
 
-		#navbar {
-			position:fixed;
-			width:100%;
-			min-height:50px;
-			top:0;
-			left:0;
-		}
+    #navbar {
+      position:fixed;
+      width:100%;
+      min-height:50px;
+      top:0;
+      left:0;
+    }
 
-		#navbar nav {
-			padding-top: 10px;
-		}
+    #navbar nav {
+      padding-top: 10px;
+    }
 
-		#navbar a {
-			text-decoration: none;
-			color: white;
-			border: none;
-			padding: 1em;
-			font-weight: 100;
-		}
+    #navbar a {
+      text-decoration: none;
+      color: white;
+      border: none;
+      padding: 1em;
+      font-weight: 100;
+    }
 
-		#navbar .dark-text {
-			color: black;
-		}
+    #navbar .dark-text {
+      color: black;
+    }
 
-		#content-buying {
-			background-color: rgba(255,255,255,1);
-			color: black;
-		}
+    #content-buying, #content-leasing {
+      background-color: rgba(255,255,255,1);
+      color: black;
+    }
 
-		#content-selling {
-			background-color: #334750;
-			color: white;
-		}
+    #content-selling {
+      /*background-color: #334750;*/
+      /*color: white;*/
+    }
 
-	</style>
+  </style>
 </head>
 <body>
-	<div id="navbar">
-		<!-- <a href="#" style="float:left"> -->
-		<div id="logo">
-        	<img src="img/logo_.png" alt="" width="100" height="50">
-        	<br/>
-        	<em>Realtors You Can Trust</em>
-    	</div>
-      	<!-- </a> -->
+  <div id="navbar">
+    <!-- <a href="#" style="float:left"> -->
+    <div id="logo">
+          <img src="img/logo_.png" alt="" width="100" height="50">
+          <br/>
+          <em>Realtors You Can Trust</em>
+      </div>
+        <!-- </a> -->
 
-		<nav style="float:right">
-			<a class="nav-link active" href="#splash">Home</a>
-			<a class="nav-link" href="#content-buying">Buying</a>
-			<a class="nav-link" href="#content-selling">Selling</a>
-			<a class="nav-link" href="#content-leasing">Leasing</a>
-			<a class="nav-link" href="#content-commercial">Commercial</a>
-			<a class="nav-link" href="#content-contact">Contact</a>
-		</nav>
-	</div>
+    <nav style="float:right">
+      <a class="nav-link active" href="#splash">Home</a>
+      <a class="nav-link" href="#content-buying">Buying</a>
+      <a class="nav-link" href="#content-selling">Selling</a>
+      <a class="nav-link" href="#content-leasing">Leasing</a>
+      <a class="nav-link" href="#content-leasing">Commercial</a>
+      <a class="nav-link" href="#content-contact">Contact</a>
+    </nav>
+  </div>
 
-	<div id="bg1" class="bg-image"></div>
-	<div id="bg2" class="bg-image"></div>
+  <div id="bg1" class="bg-image"></div>
+  <div id="bg2" class="bg-image"></div>
+  <div id="bg3" class="bg-image"></div>
 
-	<div id="splash" class="content-box bg-image-overlay">
-		<div class="cover">
-			<h1>Find your dream home.</h1>
-			<p>With over 15 years of real estate experience in the GTA, we're the realtors you can trust.</p>
-		</div>
-		
-	</div>
+  <div id="splash" class="content-box bg-image-overlay">
+    <div class="cover">
+      <h1>Find your dream home.</h1>
+      <p>With over 15 years of real estate experience in the GTA, we're the realtors you can trust.</p>
+    </div>
+    
+  </div>
 
-	<div id="content-buying" class="content-box">
-		<h2>Buying</h2>
-		<img src="img/condo.jpg" alt="condominium">
-		<br>
-		<p>Specializing in pre-construction condos, we can help you get early access to VIP pricing of new construction projects before the public.</p>
-	</div>
-	<div id="content-selling" class="content-box">
-		<h2>Selling</h2>
-		<img src="img/sold_keys.jpg" alt="condominium">
-		<br>
-		<p>Sell with confidence as we will give you a free home evaluation and help you stage your home to be sold!</p>
-	</div>
-	<div id="content-contact" class="content-box bg-image-overlay">
-		<div class="cover">
-			<h2>Contact us now!</h2>
-			<p>Email: realtorjx@yahoo.com</p>
-          	<p>Wechat: ca99home</p>
-		</div>
-	</div>
+  <div id="content-buying" class="content-box">
+    <h2>Buying</h2>
+    <!-- <img src="img/condo.jpg" alt="condominium">
+    <br> -->
+    <p>Specializing in pre-construction condos, we can help you get early access to VIP pricing of new construction projects before the public.</p>
+  </div>
+  <div id="content-selling" class="content-box bg-image-overlay">
+    <h2>Selling</h2>
+    <p>Sell with confidence as we will give you a free home evaluation and help you stage your home to be sold!</p>
+  </div>
+  <div id="content-leasing" class="content-box">
+    <h2>Leasing and Commercial</h2>
+    <p>Contact us for more information!</p>
+  </div>
+  <div id="content-contact" class="content-box bg-image-overlay">
+    <div class="cover">
+      <h2>Contact us now!</h2>
+      <p>Email: realtorjx@yahoo.com</p>
+            <p>Wechat: ca99home</p>
+    </div>
+  </div>
 
-	<script>
-		$(document).scroll(function(){
-			var position = $(this).scrollTop();
-			var NAVBAR_PADDING = 10;
-			var limitTop = $("#content-buying").offset().top - NAVBAR_PADDING;
-			var limitBot = $("#content-selling").offset().top - NAVBAR_PADDING;
-			if (position > limitTop && position < limitBot) {
-				console.log("hi");
-				$("#navbar a").addClass("dark-text");
-			}
-			else {
-				console.log("position: " + position + " top: " + limitTop + " bot: " + limitBot);
-				$("#navbar a").removeClass("dark-text");
-			}
-		})
-	</script>
-	
+  <script>
+    $(document).scroll(function(){
+      var position = $(this).scrollTop();
+      var NAVBAR_PADDING = 10;
+      var buyingTop = $("#content-buying").offset().top - NAVBAR_PADDING;
+      var buyingBot = $("#content-selling").offset().top - NAVBAR_PADDING;
+      var leasingTop = $("#content-leasing").offset().top - NAVBAR_PADDING;
+      var leasingBot = $("#content-contact").offset().top - NAVBAR_PADDING;
+      var scrolledToBuying = position > buyingTop && position < buyingBot;
+      var scrolledToLeasing = position > leasingTop && position < leasingBot;
+      if (scrolledToBuying || scrolledToLeasing) {
+        $("#navbar a").addClass("dark-text");
+      }
+      else {
+        $("#navbar a").removeClass("dark-text");
+      }
+    })
+  </script>
+  
 </body>
 </html>
