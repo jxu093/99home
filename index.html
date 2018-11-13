@@ -7,7 +7,9 @@
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,800,700,400,600,300" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    
     html, body {
       height: 100%;
       margin: 0;
@@ -16,15 +18,6 @@
       font-family: 'Helvetica Neue','Helvetica','Arial','sans-serif';
       color: white;
       text-align: center;
-    }
-    .content-box {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      
     }
     .bg-image-overlay {
       background-color: rgba(0,0,0,0.3);
@@ -63,6 +56,15 @@
       background-color: rgba(0,0,0,0.5);
     }
 
+    .content-box {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     .content-box .cover {
       width: 100%;
       background-color: rgba(0,0,0,0.5);
@@ -74,15 +76,20 @@
       border: 1px solid black;
     }
 
+    .text {
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+
     #splash h1 {
       font-weight:900;
-      font-size:4em;
+      font-size:44px;
       text-transform: uppercase;
     }
 
     #logo {
       float: left;
-      padding: 2px;
+      padding: 5px;
       /*background: rgba(0,0,0,0.4);*/
       color: azure;
       text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, .5);
@@ -97,6 +104,7 @@
     }
 
     #navbar nav {
+      float: right;
       padding-top: 10px;
     }
 
@@ -104,7 +112,7 @@
       text-decoration: none;
       color: white;
       border: none;
-      padding: 1em;
+      padding: 5px;
       font-weight: 100;
     }
 
@@ -122,6 +130,19 @@
       /*color: white;*/
     }
 
+    @media (max-width: 500px) {
+      body {
+        /*font-size: 1em;*/
+      }
+      #navbar #logo, #navbar nav {
+        float: none;
+      }
+      .text {
+        /*padding-left: 10%;*/
+        /*padding-right: 10%;*/
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -134,7 +155,7 @@
       </div>
         <!-- </a> -->
 
-    <nav style="float:right">
+    <nav>
       <a class="nav-link active" href="#splash">Home</a>
       <a class="nav-link" href="#content-buying">Buying</a>
       <a class="nav-link" href="#content-selling">Selling</a>
@@ -150,31 +171,41 @@
 
   <div id="splash" class="content-box bg-image-overlay">
     <div class="cover">
-      <h1>Find your dream home.</h1>
-      <p>With over 15 years of real estate experience in the GTA, we're the realtors you can trust.</p>
+      <div class="text">
+        <h1>Find your dream home.</h1>
+        <p>With over 15 years of real estate experience in the GTA, we're the realtors you can trust.</p>
+      </div>
     </div>
     
   </div>
 
   <div id="content-buying" class="content-box">
-    <h2>Buying</h2>
-    <!-- <img src="img/condo.jpg" alt="condominium">
-    <br> -->
-    <p>Specializing in pre-construction condos, we can help you get early access to VIP pricing of new construction projects before the public.</p>
+    <div class="text">
+      <h2>Buying</h2>
+      <!-- <img src="img/condo.jpg" alt="condominium">
+      <br> -->
+      <p>Specializing in pre-construction condos, we can help you get early access to VIP pricing of new construction projects before the public.</p>
+    </div>
   </div>
   <div id="content-selling" class="content-box bg-image-overlay">
-    <h2>Selling</h2>
-    <p>Sell with confidence as we will give you a free home evaluation and help you stage your home to be sold!</p>
+    <div class="text">
+      <h2>Selling</h2>
+      <p>Sell with confidence as we will give you a free home evaluation and help you stage your home to be sold!</p>
+    </div>
   </div>
   <div id="content-leasing" class="content-box">
-    <h2>Leasing and Commercial</h2>
-    <p>Contact us for more information!</p>
+    <div class="text">
+      <h2>Leasing and Commercial</h2>
+      <p>Contact us for more information!</p>
+    </div>
   </div>
   <div id="content-contact" class="content-box bg-image-overlay">
     <div class="cover">
-      <h2>Contact us now!</h2>
-      <p>Email: realtorjx@yahoo.com</p>
-            <p>Wechat: ca99home</p>
+      <div class="text">
+        <h2>Contact us now!</h2>
+        <p>Email: realtorjx@yahoo.com</p>
+        <p>Wechat: ca99home</p>
+      </div>
     </div>
   </div>
 
