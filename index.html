@@ -87,6 +87,10 @@
       text-transform: uppercase;
     }
 
+    #splash p {
+      font-size: 18px;
+    }
+
     #logo {
       float: left;
       padding: 5px;
@@ -101,6 +105,11 @@
       min-height:50px;
       top:0;
       left:0;
+    }
+
+    #contact {
+      float: right;
+      padding-top: 10px;
     }
 
     #navbar nav {
@@ -120,26 +129,19 @@
       color: black;
     }
 
-    #content-buying, #content-leasing {
-      background-color: rgba(255,255,255,1);
-      color: black;
-    }
-
-    #content-selling {
-      /*background-color: #334750;*/
-      /*color: white;*/
-    }
-
     @media (max-width: 500px) {
       body {
-        /*font-size: 1em;*/
+        font-size: 1em;
       }
-      #navbar #logo, #navbar nav {
+      #navbar #logo, #navbar #contact {
         float: none;
       }
       .text {
         /*padding-left: 10%;*/
         /*padding-right: 10%;*/
+      }
+      #splash h1 {
+        font-size: 22px;
       }
     }
 
@@ -147,86 +149,39 @@
 </head>
 <body>
   <div id="navbar">
-    <!-- <a href="#" style="float:left"> -->
     <div id="logo">
-          <img src="img/logo_.png" alt="" width="100" height="50">
-          <br/>
-          <em>Realtors You Can Trust</em>
-      </div>
-        <!-- </a> -->
-
-    <nav>
+      <img src="img/logo_.png" alt="" width="100" height="50">
+      <br/>
+      <em>我们的宗旨：专业·诚信·客户至上</em>
+    </div>
+    <!-- <nav>
       <a class="nav-link active" href="#splash">Home</a>
       <a class="nav-link" href="#content-buying">Buying</a>
       <a class="nav-link" href="#content-selling">Selling</a>
       <a class="nav-link" href="#content-leasing">Leasing</a>
       <a class="nav-link" href="#content-leasing">Commercial</a>
       <a class="nav-link" href="#content-contact">Contact</a>
-    </nav>
+    </nav> -->
+    <div id="contact">
+      <div>联系我们：中国电话 18193147196</div>
+      <div>微信：ca99home</div>
+    </div>
   </div>
 
   <div id="bg1" class="bg-image"></div>
-  <div id="bg2" class="bg-image"></div>
-  <div id="bg3" class="bg-image"></div>
 
   <div id="splash" class="content-box bg-image-overlay">
     <div class="cover">
       <div class="text">
-        <h1>Find your dream home.</h1>
-        <p>With over 15 years of real estate experience in the GTA, we're the realtors you can trust.</p>
+        <h1>我们是集留学，移民，英语培训，房产投资，在中加两国注册的合法公司。</h1>
+        <br>
+        <p>我们的团队包括：加拿大注册的专业移民顾问，加拿大律师协会注册的资深法律顾问，加拿大房产协会注册的资深房地产经纪人</p>
+        <p>我们的服务包括：出国英语培训，留学申请，签证办理，移民申请，房产买卖，商业投资 .</p>
       </div>
     </div>
     
   </div>
 
-  <div id="content-buying" class="content-box">
-    <div class="text">
-      <h2>Buying</h2>
-      <!-- <img src="img/condo.jpg" alt="condominium">
-      <br> -->
-      <p>Specializing in pre-construction condos, we can help you get early access to VIP pricing of new construction projects before the public.</p>
-    </div>
-  </div>
-  <div id="content-selling" class="content-box bg-image-overlay">
-    <div class="text">
-      <h2>Selling</h2>
-      <p>Sell with confidence as we will give you a free home evaluation and help you stage your home to be sold!</p>
-    </div>
-  </div>
-  <div id="content-leasing" class="content-box">
-    <div class="text">
-      <h2>Leasing and Commercial</h2>
-      <p>Contact us for more information!</p>
-    </div>
-  </div>
-  <div id="content-contact" class="content-box bg-image-overlay">
-    <div class="cover">
-      <div class="text">
-        <h2>Contact us now!</h2>
-        <p>Email: realtorjx@yahoo.com</p>
-        <p>Wechat: ca99home</p>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    $(document).scroll(function(){
-      var position = $(this).scrollTop();
-      var NAVBAR_PADDING = 10;
-      var buyingTop = $("#content-buying").offset().top - NAVBAR_PADDING;
-      var buyingBot = $("#content-selling").offset().top - NAVBAR_PADDING;
-      var leasingTop = $("#content-leasing").offset().top - NAVBAR_PADDING;
-      var leasingBot = $("#content-contact").offset().top - NAVBAR_PADDING;
-      var scrolledToBuying = position > buyingTop && position < buyingBot;
-      var scrolledToLeasing = position > leasingTop && position < leasingBot;
-      if (scrolledToBuying || scrolledToLeasing) {
-        $("#navbar a").addClass("dark-text");
-      }
-      else {
-        $("#navbar a").removeClass("dark-text");
-      }
-    })
-  </script>
   
 </body>
 </html>
