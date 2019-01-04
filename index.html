@@ -50,10 +50,10 @@
     }
 
     #splash .cover {
-      width: 100%;
+      /*width: 100%;*/
       font-family: 'Gotham', 'Source Sans Pro', 'Arial Black', Avenir, Roboto;
       text-shadow: 0 1px 3px rgba(0,0,0,.5);
-      background-color: rgba(0,0,0,0.5);
+      /*background-color: rgba(0,0,0,0.5);*/
     }
 
     .content-box {
@@ -108,8 +108,11 @@
     }
 
     #contact {
-      float: right;
-      padding-top: 10px;
+      position: fixed;
+      bottom: 0;
+      right: 10px;
+      width: 100%;
+      text-align: right;
     }
 
     #navbar nav {
@@ -131,17 +134,31 @@
 
     @media (max-width: 500px) {
       body {
-        font-size: 1em;
+        font-size: 1.1em;
       }
       #navbar #logo, #navbar #contact {
         float: none;
       }
       .text {
-        /*padding-left: 10%;*/
-        /*padding-right: 10%;*/
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
       #splash h1 {
-        font-size: 22px;
+        font-size: 1.3em;
+      }
+      #splash .cover {
+        height: 100%;
+      }
+    }
+
+    @media (max-width: 500px) and (max-height: 600px) {
+      body {
+        font-size: 1em;
+      }
+      #splash h1 {
+        font-size: 1em;
       }
     }
 
@@ -154,18 +171,7 @@
       <br/>
       <em>我们的宗旨：专业·诚信·客户至上</em>
     </div>
-    <!-- <nav>
-      <a class="nav-link active" href="#splash">Home</a>
-      <a class="nav-link" href="#content-buying">Buying</a>
-      <a class="nav-link" href="#content-selling">Selling</a>
-      <a class="nav-link" href="#content-leasing">Leasing</a>
-      <a class="nav-link" href="#content-leasing">Commercial</a>
-      <a class="nav-link" href="#content-contact">Contact</a>
-    </nav> -->
-    <div id="contact">
-      <div>联系我们：中国电话 18193147196</div>
-      <div>微信：ca99home</div>
-    </div>
+    
   </div>
 
   <div id="bg1" class="bg-image"></div>
@@ -174,12 +180,15 @@
     <div class="cover">
       <div class="text">
         <h1>我们是集留学，移民，英语培训，房产投资，在中加两国注册的合法公司。</h1>
-        <br>
         <p>我们的团队包括：加拿大注册的专业移民顾问，加拿大律师协会注册的资深法律顾问，加拿大房产协会注册的资深房地产经纪人</p>
         <p>我们的服务包括：出国英语培训，留学申请，签证办理，移民申请，房产买卖，商业投资 .</p>
       </div>
     </div>
-    
+  </div>
+
+  <div id="contact">
+    <div>联系我们：中国电话 18193147196</div>
+    <div>微信：ca99home</div>
   </div>
 
   
